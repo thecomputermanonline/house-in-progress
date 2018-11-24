@@ -1,0 +1,491 @@
+﻿@charset "UTF-8";
+
+/*   Sketchy Style sheet   */
+
+/* Reseting */
+
+html, body, div, span, applet, object, iframe,
+small, strike, strong, sub, sup, tt, var,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+table, caption, tbody, tfoot, thead, tr, th, td,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a { 
+	text-decoration: none;  
+	margin: 0; 
+	padding: 0; 
+	font-size: 100%; 
+	vertical-align: baseline; 
+	background: transparent; 
+	}
+
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clear { clear: both;}
+/* CSS's reset ends here */
+
+/*  General Style */
+body {
+	width: auto;
+	height: 100%;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 16px;
+	font-weight:bold;
+	color: #474747;
+	line-height: 1.6em;
+	background:#ffffff url("../images/bg.jpg") repeat ;
+}
+a, a:visited {
+	color: #eca110;
+	text-decoration: none;
+}
+a:hover {
+	color: #eca110;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5 {
+
+	font-family: 'Architects Daughter', cursive;
+	color: #eca110;
+}
+h2 {
+	padding: 10px 0 10px 0;
+	font-size: 34px; 
+	color: #0aa998; 
+	font-weight: bold; 
+	text-align: center; 
+	line-height: 30px;
+}
+h3 {
+	font-size: 20px; 
+	color: #0aa998; 
+	font-weight: bold; 
+	text-align: center;
+}
+a img {
+	border: 0;
+}
+ul {
+	padding-left: 38px;
+}
+
+#logo {
+	background: url(../images/logo.png) top no-repeat;
+	width: 550px;
+	height: 270px;
+	margin: 0 auto;
+	text-indent: -8888px;
+}
+#container  {
+	width:800px; margin: 0 auto; 
+}
+#mainContent {
+	z-index: 2000;
+	position: relative; 
+	width: 800px; 
+	margin-left: 0!important; 
+	margin-right: 0!important;
+	height: 400px;		
+	
+}
+#content {
+	width: 808px;
+	padding: 20px 20px 20px 20px;
+	height: 380px;
+	background: url(../images/paper_bg.png) top no-repeat;
+	position: relative;
+}
+
+#content p {
+	text-align: center !important; 
+	font-size: 14px; 
+	font-weight: 450; 
+	color: #6E6E6E;
+	padding: 5px;
+}
+
+#front_panel {
+ 	width: 840px; height: 380px;
+	background: none; 
+	position: absolute;
+	padding: 2px 2px 2px 2px;
+
+}   
+
+.panel {
+	margin-bottom: 2em;
+	display: none;
+}
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+}
+div#footer {
+    background: none;
+    padding: 1px 0 0;
+    text-align: center;
+}
+div#footer p {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 12px;
+	color: #474747;
+	line-height: 1.2em;
+}
+
+/* General Style Ends Here */
+
+/* Contact form Styling */	
+
+#show_contact { 
+	position: absolute; 
+	display: block; 
+	width: 100px; 
+	height: 110px; 
+	top: 5px; 
+	right: 5px;
+	background: url(../images/contact_us_off.png) top left no-repeat;
+	text-indent: -9999px;
+	z-index: 4000;
+	}
+#show_contact:hover{ background: url(../images/contact_us_on.png) top left no-repeat; cursor: pointer; }	
+#exit a{ 
+	position: absolute;
+	bottom: 62px; left:360px;
+	width: 90px; height: 50px;
+	background: url(../images/close.png) top left no-repeat;
+	text-indent: -9999px;
+}
+#exit a:hover { 
+	background: url(../images/close_on.png) top right no-repeat; 
+	outline:none; 
+}
+
+#contxt {
+	position: absolute;
+	bottom: 40px; 
+	left:560px;
+	width: 240px; 
+	height: 280px;
+
+}   
+
+#ContactForm {
+ 	width: 440px; height: 380px;
+	position: relative;
+	background: url(../images/contact_bg.png) top left no-repeat; 
+	display:none;
+	margin-left: 20px;
+	padding: 20px 200px 0 80px;
+}   
+.name-missing { color: #F00;}
+
+
+.bar{
+	display:none; 
+	background:url(../images/loading.gif) no-repeat center; 
+	margin:100px 170px auto; 
+	height:40px; width:40px;
+}
+	
+#MessageSent { display: none;}
+
+#ContactForm span { 
+	display: none; 
+	font-size: 12px; 
+	line-height: 10px; 
+	padding-left: 6px;
+	font-weight: normal; 
+	color: #0aa998;
+}
+#ContactForm p { padding: 0; margin: 0; text-align: left;}	
+		
+
+#ContactForm h3 { 
+	font-size: 20px;
+	color: #0aa998;
+	font-weight: bold;
+	display: block;
+	margin:auto; left: -20px; position: relative; 
+	 
+}
+#ContactForm textarea {
+	width: 374px; 
+	background: url(../images/textarea_bg.png) no-repeat top; 
+	color: #202020;  
+	height: 89px; 
+	line-height: 16px; 
+	font-family: 'Architects Daughter', cursive;
+	font-size: 12px; font-weight: bold; 
+	padding: 3px 5px 3px 8px;
+	border: none;
+	overflow:hidden; outline:none;
+}
+#input_boxes { 
+	margin: 0 auto;
+	}
+	
+#ContactForm input {
+	width: 374px; 
+	background: url(../images/input_bg.png) no-repeat top; 
+	color: #202020;  
+	height: 32px; 
+	line-height: 32px; 
+	font-size: 13px; font-weight: bold; 
+	font-family: 'Architects Daughter', cursive;
+	padding: 3px 5px 3px 8px;
+	border: none;
+	outline:none;
+}
+#ContactForm .submit {
+	border: none; 
+	background: url(../images/send.png) top left no-repeat; 
+	text-transform:none; 
+	text-indent: -9999px;
+	height: 30px; width:96px; 
+	cursor: pointer; 
+	float: left; 
+}
+#ContactForm .submit:hover { 
+	background: url(../images/send.png) top right no-repeat; 
+	}
+#ContactForm label { 
+	padding-left: 4px; 
+	font-weight: bold;
+	}
+#ContactForm p { 
+	text-align: left !important; 
+	font-size: 13px; font-weight: bold; 
+	font-family: 'Architects Daughter', cursive;
+	color: #6E6E6E;
+}
+#ContactForm .input_boxes { 
+	float: left; 
+	width: 300px; }
+
+#dummycontent {
+	padding-top:100px; 
+	height:600px; 
+	position:relative;
+	}
+	
+.bottomlink {
+	position:absolute; 
+	bottom:0;
+	}
+/* Contact form Style Ends Here*/	
+
+
+/* Newsletter subscription form Style */	
+#Newsletter { 
+  margin:0 420px auto; 
+  width: 375px;
+	height: 40px; 
+	position: absolute;
+	display: block; 
+}
+#input {
+	width: 248px;
+	height: 40px;
+	padding: 0px 5px 8px 10px;
+	border: none;
+	background: url(../images/input_notify.png) top no-repeat;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 16px;
+	text-align: left;
+	font-weight:bold;
+	float: left;
+	color: #666;
+	outline:none;
+	line-height: 25px;
+}
+
+#submit {
+	width: 122px;
+	height: 40px;
+	border: none;
+	margin-left: -10px;
+	background: url(../images/notify_me.png) bottom no-repeat;
+	color: #fff;
+	font-weight: bold;
+	text-indent: -999999px;
+	float:left;		
+}
+#submit:hover {
+	cursor:pointer;
+	background: url(../images/notify_me.png) top no-repeat;
+	text-indent: -99989px;
+}
+#AfterMsg {
+	background: url(../images/aftermsg_bg.png) top no-repeat;
+	font-size: 16px; 	
+	font-weight: bold;
+	color: #0aa998;
+	margin: auto;
+	padding-top: 16px;
+	text-align: center;
+	width: 460px;
+	height: 44px;
+	left: -40px;
+	position: relative;
+}
+#notify label.error {
+	bottom: -22px;
+	left: 10px;
+	color: orange;									
+    display: block;
+    position: absolute;
+    font-size: 12px;		
+    white-space: nowrap;	
+}
+/* Newsletter Styling Ends Here*/	
+
+
+/* Countdown Timer Style */
+
+#countdown {
+	width: 540px;
+	background: url(../images/time_bkg.png) top no-repeat;
+	margin: 15px 120px auto;
+	height: 140px;
+	padding-top: 20px;
+	padding-left: 18px;
+	
+}
+.countdown_rtl {
+	direction: rtl;
+}
+.countdown_row {
+	clear: both;
+	width: 100%;	
+}
+.countdown_section {
+	display: block;
+	width:110px;
+	float: left;
+	padding-top: 30px;
+	text-align: center;
+	background: url(../images/time_frame.png) top no-repeat;
+	height:85px;
+	margin:0 10px 0 10px;	
+}
+.countdown_amount {
+	font-family: 'Cabin Sketch', cursive;
+	font-size:50px;
+/*	font-weight:bold; */
+	color:#888888;
+}
+.count_titles {
+	font-family: 'Architects Daughter', cursive;
+	margin-top:30px;
+	display:block;
+	font-size:13px;
+	font-weight:bold;
+	color:#6E6E6E;
+}
+/* Countdown Timer Style  Ends Here*/
+
+/* Progress Bar Styling */
+#progress-box {
+	width: 540px;
+	background: url(../images/progress_bg.png) top no-repeat;
+	height: 110px;
+	padding-top: 15px;
+	margin: 0 auto;
+}
+#progress-bg {
+  	width: 500px;
+	height: 80px;
+	background: url(../images/bar-bg.png) top no-repeat;
+	margin: 0 auto;
+	padding-top: 4px;
+}
+#progress {}
+.progressbar {
+    border:0px;
+    width: 490px;
+    height: 70px;
+	font-family: 'Cabin Sketch', cursive;
+    line-height: 72px;
+    text-align: center;
+	color: none;
+	font-size: 44px;
+	margin: 0 auto;
+}
+
+/* Progress Bar Styling  Ends Here*/
+
+/* Social Links */
+#social {  margin: 10px 10px 10px -55px; display: block; width: 380px;}
+#social ul { list-style: none; }	
+#social ul li { float: right; display: block; height: 32px; margin-right:8px; text-indent: -99999px; }
+#social a { width: 32px; height: 32px; display:block; text-indent: -9999px; }
+#social li.facebook { background: url(../images/icon_facebook.png) top no-repeat;  }
+#social li.facebook:hover { background: url(../images/icon_facebook.png) bottom no-repeat; cursor:pointer;}
+#social li.email { background: url(../images/icon_email.png) top no-repeat;  }
+#social li.email:hover { background: url(../images/icon_email.png) bottom no-repeat; cursor:pointer;}
+#social li.twitter { background: url(../images/icon_twitter.png) top no-repeat;  }
+#social li.twitter:hover { background: url(../images/icon_twitter.png) bottom no-repeat; cursor:pointer;}
+#social li.rss { background: url(../images/icon_rss.png) top no-repeat;  }
+#social li.rss:hover { background: url(../images/icon_rss.png) bottom no-repeat; cursor:pointer;}
+#social li.stumbleupon { background: url(../images/icon_stumbleupon.png) top no-repeat;  }
+#social li.stumbleupon:hover { background: url(../images/icon_stumbleupon.png) bottom no-repeat; cursor:pointer;}
+#social li.linkedin { background: url(../images/icon_linkedin.png) top no-repeat;  }
+#social li.linkedin:hover { background: url(../images/icon_linkedin.png) bottom no-repeat; cursor:pointer;}
+#social li.skype { background: url(../images/icon_skype.png) top no-repeat;  }
+#social li.skype:hover { background: url(../images/icon_skype.png) bottom no-repeat; cursor:pointer;}
+#social li.youtube { background: url(../images/icon_youtube.png) top no-repeat;  }
+#social li.youtube:hover { background: url(../images/icon_youtube.png) bottom no-repeat; cursor:pointer;}
+
+/* Social Links Styling Ends Here*/	
+
+
+p.copyright { font-size: 10px; text-align: center; color: #336699; margin-top: 10px; }

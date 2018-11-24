@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>House Masters | House Hunting made easy</title>
+
+	<!-- Google Fonts Used  -->
+
+
+	<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+	<!-- Style Sheet  -->
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+
+	<!-- Scripts Used  -->
+
+	<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/scripts.js"></script>
+	<!--Validating forms-->
+	<script type="text/javascript" src='./js/jquery.form.js'></script>
+	<script type="text/javascript" src='./js/jquery.validate.js'></script>
+	<script>
+		$(function () {
+			$('#notify').validate({
+				submitHandler: function (form) {
+					$(form).ajaxSubmit({
+						url: 'submit.php',
+						type: 'post',
+						data: form.serialize,
+						success: function (data) {
+							//alert(data);
+							$('#notify').hide();
+							$('#Newsletter').append("<h3 id='AfterMsg'>You will be the first who will know about our launch.</h3>")
+						}                           //Change this text for the message that will appear after send the subscription email
+					});
+				}
+			});
+		});
+	</script>
+	<!--progression-->
+	<script type="text/javascript" src="./js/jquery.progression.1.3.js"></script>
+	<script type="text/javascript"> 
+		jQuery.fn.progression.defaults.Current = 0;
+		jQuery.fn.progression.defaults.Background = '';
+		jQuery.fn.progression.defaults.aBackground = '';
+		jQuery.fn.progression.defaults.TextColor = '#999999';
+		jQuery.fn.progression.defaults.aTextColor = '#555555';
+
+		jQuery(document).ready(function () {
+			jQuery('#progress').progression({
+				Current: 89, // Change this number for the progress bar percentage
+				aBackground: '#e9e9e9',
+				aBackgroundImg: './images/progress.png'
+			});
+		}); 
+	</script>
+
+</head>
+
+<body>
+
+	<div id="container">
+		<!-- Main Container -->
+
+		<div id="mainContent">
+			<div id="logo">HouseMasters.mu</div>
+			<div id="content">
+
+				<div id="show_contact" class="show_contact">contact</div>
+				<!-- the clickable image at the rigth tho show the contact form -->
+
+				<div id="ContactForm">
+					<!-- Begins Contact Form -->
+					<div class="loader"></div>
+					<!-- Image showing while the ajax proccess ends -->
+					<div class="bar"></div>
+					<form action="mail.php" class="ContactForm" name="contact_form" method="post">
+						<h3>Send Us a Message</h3>
+						<!-- Header text in the contact form -->
+						<div class="input_boxes">
+							<p>
+								<label for="name">Your Name</label>
+								<span class="name-missing">* Enter your Full Name</span>
+								<br />
+								<input id="name" type="text" value="" name="name" />
+							</p>
+							<p>
+								<label for="e-mail">Your E-mail</label>
+								<span class="email-missing">* Enter a valid email</span>
+								<br />
+								<input id="e-mail" type="text" value="" name="email" />
+							</p>
+							<p>
+								<label for="message">Type your Message</label>
+								<span class="message-missing">* Type your Message!</span>
+								<br />
+								<textarea id="message" name="message"></textarea>
+							</p>
+							<div id="exit">
+								<a href="#" class="show_contact">exit</a>
+							</div>
+							<input class="submit" type="submit" name="submit" value="SEND" onfocus="this.blur()" />
+						</div>
+					</form>
+					<div id="contxt" class="contxt">
+						<!-- Static text at the right side of the contact form -->
+						<h3>Address</h3>
+						<p>Avenue des cocotier</p>
+						<p>2nd Floor </p>
+						<p>MOrcement Bismic</p>
+						<h3>Phone</h3>
+						<p>58531705</p>
+						<h3>Email</h3>
+						<p>rentals@housemasters.mu</p>
+					</div>
+					<!-- end of the static text -->
+					<!-- Contact Form Ends Here -->
+				</div>
+				<div id="front_panel" class="front_panel">
+					<!-- Front panel Container -->
+					<h2>Over a 100 Houses will soon be listed</h2>
+					<!-- Header in the front panel -->
+					<p>Work in progress so far...</p>
+					<p></p>
+					<!-- The second line in the Front panel -->
+
+					<!--Progress bar -->
+					<div id="progress-box">
+						<div id="progress-bg">
+							<div class="progressbar" id="progress" style="font-weight:bold">66</div>
+						</div>
+					</div>
+					<!--Ends Progress bar -->
+					<p>Leave Your Contact to be notified of houses as soon as they are available...</p>
+					<p></p>
+					<!-- The message above the suscribe form -->
+
+					<!--Newsletter Form-->
+					<div id="Newsletter">
+						<form action="submit.php" method="post" name="news_form" id="notify">
+							<!-- Change the text "Type your email address" that should appear in the field "notify me" in the subscribe form -->
+							<input type="email" id="input" name="email" placeholder="Type your email address" class="required">
+							<input type="submit" id="submit" value="SEND" class="required email">
+						</form>
+					</div>
+
+					<!--Social links area-->
+
+					<div id="social">
+						<ul>
+							<li class="email show_contact">
+								<a href="#">Email</a>
+							</li>
+							<li class="twitter">
+								<a href="http://www.twitter.com/#!" target="_blank">Twitter</a>
+							</li>
+							<li class="facebook">
+								<a href="http://www.facebook.com/housemasters.mu" target="_blank">Facebook</a>
+							</li>
+
+							<li class="linkedin">
+								<a href="http://www.linkedin.com/#!" target="_blank">linkedin</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<!-- end front_panel-->
+
+			</div>
+			<!--end content-->
+
+			<!--Footer-->
+			<div class="clearfix" id="footer">
+				<p> - +230-58531705 - Copyright 2018 - House MAsters - All rights reserved - </p>
+			</div>
+			<!--end footer-->
+		</div>
+		<!-- maincontainer-->
+	</div>
+	<!-- container-->
+</body>
+
+</html>
